@@ -1,0 +1,37 @@
+<script type="text/javascript">
+
+    function getData() {
+        
+        // document.getElementById('form_nome').value = "André";
+        document.getElementById("form_nome").value = sessionStorage.getItem("form_nome");
+        document.getElementById("form_email").value = sessionStorage.getItem("form_email");
+        document.getElementById("form_telefone").value = sessionStorage.getItem("form_telefone");
+        document.getElementById("form_assunto").value = sessionStorage.getItem("form_assunto");
+        document.getElementById("form_mensagem").value = sessionStorage.getItem("form_mensagem");
+    }
+</script>
+
+<form class="ui form" method="POST">
+  <div class="field">
+    <label>Nome</label>
+    <input type="text" id="form_nome" name="nome" placeholder="Nome">
+  </div>
+  <div class="field">
+    <label>E-mail</label>
+    <input type="email" id="form_email"name="email" placeholder="E-mail">
+  </div>
+  <div class="field">
+    <label>Telefone</label>
+    <input type="text" id="form_telefone" name="telefone" placeholder="Telefone">
+  </div>
+  <div class="field">
+    <label>Assunto</label>
+    <input type="text" id="form_assunto" name="assunto" placeholder="Assunto">
+  </div>
+  <div class="field">
+    <label>Mensagem</label>
+    <input type="text" id="form_mensagem" name="mensagem" placeholder="Mensagem">
+  </div>
+</form>
+
+<button class="ui button" onclick="getData()">Buscar dados da sessão</button>

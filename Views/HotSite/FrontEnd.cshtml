@@ -1,0 +1,38 @@
+@{
+    ViewBag.Title = "Front End";
+    Layout = "~/Views/Shared/Base/_Layout.cshtml";
+}
+
+<script type="text/javascript" src="~/resources/js/functions/arquivo_start.js"></script>
+
+<form class="ui form" method="POST" style="padding-bottom: 30px;">
+  <div class="field">
+    <label>Nome</label>
+    <input type="text" id="form_nome" name="nome" placeholder="Nome" required onkeyup="busca('valor1','form_nome')">
+    <input type="text" id="valor1" placeholder="Valor" disabled="disabled">
+  </div>
+  <div class="field">
+    <label>E-mail</label>
+    <input type="email" id="form_email"name="email" placeholder="E-mail" required onkeyup="busca('valor2','form_email')">
+    <input type="text" id="valor2" placeholder="Valor" disabled="disabled">
+  </div>
+  <div class="field">
+    <label>Telefone</label>
+    <input type="text" id="form_telefone" name="telefone" placeholder="Telefone" required onkeyup="busca('valor3','form_telefone')">
+    <input type="text" id="valor3" placeholder="Valor" disabled="disabled">
+  </div>
+  <div class="field">
+    <label>Assunto</label>
+    <input type="text" id="form_assunto" name="assunto" placeholder="Assunto" required  onkeyup="busca('valor4','form_assunto')">
+    <input type="text" id="valor4" placeholder="Valor" disabled="disabled">
+  </div>
+  <div class="field">
+    <label>Mensagem</label>
+    <input type="text" id="form_mensagem" name="mensagem" placeholder="Mensagem" required onkeyup="busca('valor5','form_mensagem')">
+    <input type="text" id="valor5" placeholder="Valor" disabled="disabled">
+  </div>
+  
+</form>
+
+<button class="ui button" onclick="setData()">Enviar</button>
+<button class="ui button" onclick="getData()">Buscar dados da sessao</button>
